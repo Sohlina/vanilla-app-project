@@ -40,6 +40,7 @@ a {
 }
 
 .vanilla-weather-app {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 80%);
   margin-bottom: 0;
   padding: 20px;
   border: 1px solid #e2d5d5;
@@ -61,4 +62,13 @@ a {
 .current-weather-temperature .units {
   position: relative;
   top: -20px;
+}
+
+.current-weather-temperature .active {
+  color: #1b1717;
+  text-decoration: none;
+}
+
+.current-weather-temperature .active:hover {
+  cursor: default;
 }
