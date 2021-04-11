@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+#weather-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .city-header {
   margin-bottom: 25px;
 }

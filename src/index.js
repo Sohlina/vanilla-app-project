@@ -42,8 +42,24 @@ function showCurrentTemperature (response) {
   
 }
 
+function search(city) {
+  let apiKey = "36362df01ab1fd13299eeea7914024b2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
+
+  axios.get(apiUrl).then(showCurrentTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input"); 
+  search(cityInputElement.value);
+}
+
 let apiKey = "36362df01ab1fd13299eeea7914024b2";
 let city = "Stockholm";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
 
 axios.get(apiUrl).then(showCurrentTemperature);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
