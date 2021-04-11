@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+.city-header {
+  margin-bottom: 25px;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 20px auto;
