@@ -12,19 +12,19 @@
     />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="src/style.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="src/style.css" />
       </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
       <div class="vanilla-weather-app">
-      <h1>Stockholm</h1>
+      <h1 id="city"></h1>
       <ul>
         <li id="date">
           Sunday 12:00
         </li>
         <li id="description">
-          Clear
         </li>
       </ul>
       <div class="row">
@@ -34,21 +34,19 @@
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" 
             alt="Sunny" 
             class="float-left" /> 
-            <strong>8</strong
+            <strong id="temperature"></strong
               ><span class="units">°C⎜<a href="#">°F</a>
             </span>
             </div>
           </div>
-
-
         <div class="col-6">
           <ul>
             <li>
-              Humidity: 
-            </li>
+              Humidity: <span id="humidity"></span>
+            %</li>
             <li>
-              Wind speed: 
-            </li>
+              Wind speed: <span id="wind-speed"></span>
+            km/h</li>
           </ul>
         </div>
       </div>
