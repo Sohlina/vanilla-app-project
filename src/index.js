@@ -31,6 +31,8 @@ function showCurrentTemperature (response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -40,7 +42,6 @@ function showCurrentTemperature (response) {
   iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
   
-  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
