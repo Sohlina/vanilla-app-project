@@ -25,6 +25,21 @@ a {
   text-decoration: none;
 }
 
+#city-input {
+  border: 1px solid #ceeaf5;
+}
+
+#search-button {
+  background-color: #ceeaf5;
+  color: white;
+}
+
+#search-button:hover {
+  background-color: #f8f5f1;
+  border: 1px solid #ceeaf5;
+  color: black;
+}
+
 #weather-icon {
   width: 70px;
   height: 70px;
@@ -41,12 +56,12 @@ a {
 }
 
 .vanilla-weather-app {
-  background-image: linear-gradient(to top, #f8f5f1 0%, #ace0f9 80%);
+  background-image: linear-gradient(to top, #ace0f9 0%, #f8f5f1 80%);
   margin-bottom: 0;
   padding: 20px;
-  border: 1px solid #e2d5d5;
+  border: 1px solid #ade1f8;
   border-radius: 10px;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .current-weather-temperature img {
@@ -80,9 +95,8 @@ a {
 }
 
 .weather-forecast-weekday {
-  font-weight: bold;
   margin-top: 50px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .weather-forecast-temperature-min {

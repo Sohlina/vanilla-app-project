@@ -55,7 +55,7 @@ function showForecast(response) {
           alt="weather-condition" 
           width="40px">
           <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span>⎜
+          <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span> ⎜
           <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span>
         </div>    `;
     forecastHTML = forecastHTML + `</div>`;
@@ -107,25 +107,6 @@ function handleSubmit(event) {
 }
 search("Stockholm");
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let apiKey = "36362df01ab1fd13299eeea7914024b2";
 let city = "Stockholm";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
@@ -137,8 +118,3 @@ let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
